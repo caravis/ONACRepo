@@ -38,9 +38,9 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - _GlitchStrength: 1
+    - _GlitchStrength: 0
     - _NoiseAmount: 50
-    - _Whatever: 10
+    - _Whatever: 36.37
     m_Colors:
     - _TestColor: {r: 0.90943396, g: 0.4238305, b: 0.5199068, a: 0}
   m_BuildTextureStacks: []
