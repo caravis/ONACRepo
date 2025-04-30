@@ -7,6 +7,8 @@ public class EnemyAI : MonoBehaviour
 {
     public Transform player; // Player to chase
 
+    public EnemyAI[] allEnemies; //Assign in Inspector
+
     public float speed = 2f;             // Movement speed
     public float attackDistance = 1f;    // Distance at which the enemy can attack
 
@@ -116,6 +118,7 @@ public class EnemyAI : MonoBehaviour
         {
             Debug.Log("Player loses!");
             // TODO: Add actual lose condition logic here
+            JumpScareManager.Instance.TriggerJumpScare(this, allEnemies);
         }
     }
 
@@ -152,7 +155,7 @@ public class EnemyAI : MonoBehaviour
     /// <summary>
     /// Rotates the enemy to face the player smoothly
     /// </summary>
-    void FacePlayer()
+    public void FacePlayer()
     {
         Vector3 direction = (player.position - transform.position).normalized;
         Quaternion lookRotation = Quaternion.LookRotation(new Vector3(direction.x, 0, direction.z));
