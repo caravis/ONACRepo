@@ -21,16 +21,17 @@ public class MouseLook : MonoBehaviour
     {
         controller = GetComponent<CharacterController>();
 
-        if (cursorLock)
+        if (cursorLock && !PauseLogic.IsGamePaused)
         {
             Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false; 
+            Cursor.visible = false;
         }
     }
 
     // Update is called once per frame
     void Update()
     {
+        if (PauseLogic.IsGamePaused) return; // skip mouse look when paused
         UpdateMouse(); 
     }
 

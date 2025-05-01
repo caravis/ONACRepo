@@ -18,6 +18,9 @@ public class NightTimer : MonoBehaviour
 
     public TextMeshProUGUI hourText; // Drag and drop from the Canvas in Inspector
 
+    public AudioSource alarmClock;
+
+    public static bool isAlarmPlaying = false;
 
     /// <summary>
     /// Awake method (you know what an awake is) 
@@ -58,9 +61,19 @@ public class NightTimer : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Cursor.visible = true;
 
-            // Load the Win screen
-            SceneManager.LoadScene("WinScene");
+            if (!alarmClock.isPlaying)
+            {
+                alarmClock.Play();
+                isAlarmPlaying = true;
+                Invoke(nameof(LoadWinScene), alarmClock.clip.length);
+            }
         }
+    }
+
+    private void LoadWinScene()
+    {
+        isAlarmPlaying = false;
+        SceneManager.LoadScene("WinScene");
     }
 
     /// <summary>

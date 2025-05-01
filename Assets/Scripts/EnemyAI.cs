@@ -40,18 +40,20 @@ public class EnemyAI : MonoBehaviour
 
     void Update()
     {
+        // Stop all AI behavior if alarm is playing
+        if (NightTimer.isAlarmPlaying)
+            return;
+
         if (!isAdvancing)
         {
-            // Countdown until next potential advance
             currentTimer -= Time.deltaTime;
             if (currentTimer <= 0f)
             {
-                TryAdvance(); // Random roll to decide if it advances
+                TryAdvance();
             }
         }
         else
         {
-            // Follow path if still on one, otherwise go straight to player
             if (isFollowingPath && pathWaypoints.Length > 0)
             {
                 FollowPath();
