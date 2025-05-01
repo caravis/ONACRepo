@@ -324,6 +324,7 @@ MonoBehaviour:
   - {fileID: 866393154}
   - {fileID: 1680607353}
   - {fileID: 208324890}
+  - {fileID: 1027268391}
   speed: 2
   attackDistance: 1
   pathWaypoints: []
@@ -340,11 +341,11 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_audioClip: {fileID: 8300000, guid: c7420000f58a0904db167dd3db15d465, type: 3}
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -856,6 +857,7 @@ MonoBehaviour:
   - {fileID: 866393154}
   - {fileID: 1680607353}
   - {fileID: 208324890}
+  - {fileID: 1027268391}
   playerCamera: {fileID: 330585545}
   repelAngleThreshold: 10
 --- !u!114 &862908713
@@ -979,6 +981,7 @@ MonoBehaviour:
   - {fileID: 866393154}
   - {fileID: 1680607353}
   - {fileID: 208324890}
+  - {fileID: 1027268391}
   speed: 2
   attackDistance: 1
   pathWaypoints:
@@ -998,7 +1001,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: db0d6fed8a74d374a84e3931cd24f08a, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 1
@@ -1245,13 +1248,14 @@ MonoBehaviour:
   allEnemies:
   - {fileID: 866393154}
   - {fileID: 1680607353}
+  - {fileID: 208324890}
   - {fileID: 1027268391}
   speed: 2
   attackDistance: 1
   pathWaypoints:
   - {fileID: 490617054}
   - {fileID: 115262196}
-  chanceToAdvance: 0.01
+  chanceToAdvance: 0.05
   minWaitTime: 3
   maxWaitTime: 7
 --- !u!212 &1027268392
@@ -1315,7 +1319,7 @@ Transform:
   m_GameObject: {fileID: 1027268389}
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
-  m_LocalPosition: {x: 0.14, y: -0, z: 0.07}
+  m_LocalPosition: {x: 0, y: 0.01, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1773,6 +1777,7 @@ MonoBehaviour:
   - {fileID: 866393154}
   - {fileID: 1680607353}
   - {fileID: 208324890}
+  - {fileID: 1027268391}
   speed: 2
   attackDistance: 1
   pathWaypoints:
@@ -1792,7 +1797,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 394b68122d108d94eb55743b341ea869, type: 3}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 0.7
   m_Pitch: 1
   Loop: 1
