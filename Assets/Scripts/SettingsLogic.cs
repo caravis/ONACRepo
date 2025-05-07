@@ -15,6 +15,7 @@ public class SettingsLogic : MonoBehaviour
     public Slider ambienceSlider;
     public Slider sfxSlider;
 
+
     void Start()
     {
         // Set up the event listeners for sliders

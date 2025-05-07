@@ -12,6 +12,9 @@ public class PauseLogic : MonoBehaviour
     public GameObject pauseMenuUI; // UI Reference to the pause menu
     public GameObject settingsMenuUI; // UI Reference to the pause menu
 
+    public Transform tvTransform;
+    public Transform playerCameraTransform;
+
     public static bool IsGamePaused = false;
 
     private void Start()
@@ -42,6 +45,12 @@ public class PauseLogic : MonoBehaviour
 
         Cursor.lockState = CursorLockMode.None;
         Cursor.visible = true;
+
+        // Make the camera look at the TV
+        if (playerCameraTransform != null && tvTransform != null)
+        {
+            playerCameraTransform.LookAt(tvTransform.position);
+        }
     }
 
     public void ResumeGame()
@@ -77,8 +86,13 @@ public class PauseLogic : MonoBehaviour
     public void TitleScene()
     {
         Time.timeScale = 1;
+        IsGamePaused = false; // Reset pause flag
+        Cursor.lockState = CursorLockMode.Locked; // Re-lock cursor
+        Cursor.visible = false;
+
         SceneManager.LoadSceneAsync("TitleScene");
     }
+
 
     public void EndGame()
     {

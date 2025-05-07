@@ -286,6 +286,12 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &116895115 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8576380527127915277, guid: 278689aa4b833ad439db26755b39b15c,
+    type: 3}
+  m_PrefabInstance: {fileID: 6031758878142732051}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &125741406
 GameObject:
   m_ObjectHideFlags: 0
@@ -2569,6 +2575,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   pauseMenuUI: {fileID: 339866316}
   settingsMenuUI: {fileID: 1231850836}
+  tvTransform: {fileID: 116895115}
+  playerCameraTransform: {fileID: 862908711}
 --- !u!114 &862908715
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2892,7 +2900,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: -994062697205621908, guid: e04dbba8fb2c75d4c94dfb02fed125a9,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: b8b5a97125ec5b8469d3c9f8a6c95dce, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 0.001
   m_Pitch: 1
@@ -3045,7 +3053,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 15dcfc4b69e43ef488ffee7b5afec141, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f2aa3130abdb6d14c9a1f12b347a6a38, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -3066,7 +3074,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: -0.7071068}
   m_LocalPosition: {x: 0, y: 0.01, z: 0}
-  m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
+  m_LocalScale: {x: 0.1, y: 0.1, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
